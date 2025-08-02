@@ -30,8 +30,8 @@ var (
 func TestMain(m *testing.M) {
 	// CLI arguments
 	usage := flag.Bool("usage", false, "Print CLI usage help")
-	flag.BoolVar(&testJSONPath, "testJSONPath", false, "Enable JSONPath testing")
-	flag.BoolVar(&testXPath, "testXPath", false, "Enable XPath testing")
+	flag.BoolVar(&testJSONPath, "testJSONPath", true, "Enable JSONPath testing")
+	flag.BoolVar(&testXPath, "testXPath", true, "Enable XPath testing")
 	flag.StringVar(&serverURL, "server", "", "Base URL of the directory service")
 	flag.StringVar(&templateURL, "templateURL", assertionsTemplate, "URL to download assertions template")
 	flag.StringVar(&manualURL, "manualURL", assertionsManual, "URL to download template for assertions that are tested manually")

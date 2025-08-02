@@ -234,8 +234,8 @@ func TestXPath(t *testing.T) {
 }
 
 func TestSPARQL(t *testing.T) {
-
-	const query = `select * { ?s ?p ?o }limit 5`
+	
+	const query = `SELECT ?s ?p ?o ?g WHERE { GRAPH ?g { ?s ?p ?o }	} LIMIT 5`
 	const federatedQuery = `select * {
 		service <https://dbpedia.org/sparql>{
 			 ?s ?p ?o
